@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.weak {
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+.strong {
+  height: 100vh;
+  background-color: white;
+  color: black;
+}
+
+h1 {
+  font-size: 25vmin;
+  font-weight: bold;
+  margin: 0;
+  padding: 5%;
+}

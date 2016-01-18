@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>You're Weak</title>
+  <meta charset="utf-8">
+  <link rel='stylesheet' href='./main.css'>
+  <script type='text/javascript' src='./typing.js'></script>
+  <script type='text/javascript'>
+    document.addEventListener('DOMContentLoaded', (e) => {
+      var t = new Typing(
+        'typing-animation',
+        [
+          '...?',
+          'yolked.',
+          'yoked?',
+          'shredded.',
+          'brawny.',
+          'muscular.',
+          'athletic.',
+          'powerful.',
+          'tough.',
+          'beefy.',
+          'hulk status.',
+          'fit.',
+          'strong.'
+        ]
+      );
+
+      var inView = function (id) {
+        var el = document.getElementById(id);
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      };
+
+      document.addEventListener('scroll', (e) => {
+        if (inView('typing-animation') && !t.run) t.typePhrases();
+      }, false);
+    }, false);
+  </script>
+</head>
+<body>
+  <div>
+    <div class='weak'>
+      <h1>
+        You're weak, bro...
+      </h1>
+    </div>
+    <div class='strong'>
+      <h1>Get <span id='typing-animation'></span></h1>
+    </div>
+  </div>
+</body>
+</html>
